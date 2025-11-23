@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .status {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .status.active {
+            background: rgba(76, 175, 80, 0.3);
+        }
+
+        .status.paused {
+            background: rgba(255, 71, 87, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        .info {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .info ul {
+            margin: 0;
+            padding-left: 15px;
+        }
+
+        .shortcuts {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🎯</div>
+        <div class="title">OmniFetch Selector</div>
+    </div>
+
+    <div class="status active" id="status">
+        <strong>✅ Active</strong> - Hover over elements
+    </div>
+
+    <div class="controls">
+        <button id="toggleBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="info">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Hover over any element to see selector</li>
+            <li>Click on element to copy selector</li>
+            <li>Use with OmniFetch scraper</li>
+        </ul>
+
+        <div class="shortcuts">
+            <strong>Keyboard:</strong><br>
+            <code>Ctrl+Shift+S</code> - Toggle on/off
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
